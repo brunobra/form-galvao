@@ -13,7 +13,7 @@
 	color: #4E4E4E;
 }
 
-input {
+.precare-form input {
 	font-family: 'AzulHelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
 	outline: none;
 	display: block;
@@ -31,7 +31,15 @@ input {
 	transition: border-color ease-in-out 0.25s, background-color ease-in-out 0.25s;
 }
 
-label {
+.precare-form .error input {
+	border-color: #ED3423;
+}
+
+.precare-form .error label {
+	color: #ED3423;
+}
+
+.precare-form label {
 	display: inline-block;
 	max-width: 100%;
 	margin-bottom: 2px;
@@ -39,7 +47,7 @@ label {
 	font-size: 12px;
 }
 
-button {
+.precare-form button {
 	margin-top: 8px;
 	margin-bottom: 24px;
 	display: block;

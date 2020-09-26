@@ -6,27 +6,39 @@
 		<link id="styles" rel="stylesheet" href="/assets/css/index.css">
 		<link rel="shortcut icon" href="/assets/images/azul-icon.png" type="image/png">
 	</head>
-	<body class="precare">
+	<body class="precare" id="precare">
 		<img src="assets/images/logo_azul_2019.png" />
 		<h1>Atendimento</h1>
 		<form id="precare-form" class="precare-form">
-			<label for="name">Nome *</label>
-			<input type="text" name="name" required />
+			<div>
+				<label for="name">Nome *</label>
+				<input type="text" name="name" required onblur="validate(this)" />
+			</div>
 
-			<label for="lastname">Sobrenome *</label>
-			<input type="text" name="lastname" required />
+			<div>
+				<label for="lastname">Sobrenome *</label>
+				<input type="text" name="lastname" required onblur="validate(this)" />
+			</div>
 
-			<label for="cpf">CPF *</label>
-			<input id="inputCpf" type="text" name="cpf" required />
+			<div>
+				<label for="cpf">CPF *</label>
+				<input id="inputCpf" type="text" name="cpf" required onblur="validate(this)" />
+			</div>
 
-			<label for="email">Endereço de email *</label>
-			<input type="email" name="email" required />
+			<div>
+				<label for="email">Endereço de email *</label>
+				<input type="email" name="email" required onblur="validate(this)" />
+			</div>
 
-			<label for="phone">Telefone *</label>
-			<input id="inputPhone" type="phone" name="phone" required />
+			<div>
+				<label for="phone">Telefone *</label>
+				<input id="inputPhone" type="phone" name="phone" required onblur="validate(this)" />
+			</div>
 
-			<label for="azul">Número TudoAzul</label>
-			<input type="text" name="azul" />
+			<div>
+				<label for="azul">Número TudoAzul</label>
+				<input type="text" name="azul" />
+			</div>
 
 			<button type="submit">
 				Enviar
