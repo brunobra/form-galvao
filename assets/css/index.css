@@ -1,3 +1,18 @@
+.precare {
+	display: grid;
+	gap: 1rem;
+	align-items: center;
+	justify-items: center;
+}
+
+.precare-form {
+	width: 100%;
+}
+
+.precare h1 {
+	color: #4E4E4E;
+}
+
 input {
 	font-family: 'AzulHelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
 	outline: none;

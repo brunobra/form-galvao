@@ -38,7 +38,7 @@ document.getElementById('inputPhone').addEventListener('keydown', (event) => {
 	event.target.value = phoneMask(`${event.target.value}${event.key}`);
 });
 
-document.getElementById('form').addEventListener('submit', (event) => {
+document.getElementById('precare-form').addEventListener('submit', (event) => {
 	event.preventDefault();
 	const data = {};
 
