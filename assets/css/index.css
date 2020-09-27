@@ -47,7 +47,7 @@
 	font-size: 12px;
 }
 
-.precare-form button {
+.precare button {
 	margin-top: 8px;
 	margin-bottom: 24px;
 	display: block;
@@ -70,9 +70,6 @@
 	border-radius: 2px;
 }
 
-
-/* THIS RULE MUST BE THE LAST ONE */
-div[id^="LPMcontainer"] {
-	top: -50% !important;
+.precare #precare-close {
+	width: auto;
 }
-

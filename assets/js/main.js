@@ -1,14 +1,18 @@
+if (sessionStorage.getItem('azulPrecareForm')) {
+	document.getElementById('precare-form').style.display = 'none';
+	document.getElementById('precare-close').style.display = 'block';
+}
+
 const precare = document.getElementById('precare');
 const config = { attributes: true, childList: true, subtree: true };
 
 const callback = function() {
 	const lpChat = document.getElementById('lpChat');
-	const form = document.getElementById('precare-form');
 
 	if (lpChat) {
-		form.style.display = 'none';
-	} else {
-		form.style.display = 'block';
+		document.getElementById('lp-button-style').disabled = false;
+	} else if (sessionStorage.getItem('azulPrecareForm')) {
+		document.getElementById('lp-button-style').disabled = true;
 	}
 };
 
@@ -122,7 +126,9 @@ document.getElementById('precare-form').addEventListener('submit', (event) => {
 
 	if (hasError) return;
 
+	sessionStorage.setItem('azulPrecareForm', JSON.stringify(data));
 	event.target.style.display = 'none';
+	document.getElementById('precare-close').style.display = 'block';
 
 	lpTag.sdes.push([
 		{
@@ -148,4 +154,8 @@ document.getElementById('precare-form').addEventListener('submit', (event) => {
 	]);
 
 	clickLPButton();
+});
+
+document.getElementById('precare-close').addEventListener('click', () => {
+	window.close();
 });
